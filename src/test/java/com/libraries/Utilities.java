@@ -2,11 +2,18 @@ package com.libraries;
 
 import static org.testng.Assert.assertEquals;
 
+import java.io.File;
+import java.sql.Timestamp;
 import java.time.Duration;
+import java.util.Date;
 
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+
+import com.google.common.io.Files;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -105,6 +112,27 @@ public class Utilities {
 		}
 		
 	}
+	public String takeScreenshot(String screenshotname) {
+		String finalScreenshotPath=null;
+		try {
+			String fileLocation="target/"+screenshotname+ "_" +getCurrentTime()+".png";
+			File filePath=new File(fileLocation);
+			String newPath=filePath.getAbsolutePath();
+			File srcFile=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+			Files.copy(srcFile, new File(newPath));
+			finalScreenshotPath=newPath;
+			System.out.println("screen shot location ---->"+newPath);
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			assertEquals(true,false);
+		}
+		return finalScreenshotPath;
+		
+		
+	}
+	
 	
 	//Helper Methods================================
 	public void customWait(double inSeconds) {
@@ -119,6 +147,22 @@ public class Utilities {
 		
 		
 	}
+	private String getCurrentTime() {
+		String finalTimeStamp=null;
+		try {
+			Date date=new Date();
+			System.out.println("current date: "+date);
+			String tempTime=new Timestamp(date.getTime()).toString();
+			finalTimeStamp=tempTime;
+		} catch (Exception e) {
+			e.printStackTrace();
+			assertEquals(true,false);
+			
+		}
+		return finalTimeStamp;
+		
+	}
+	
 	
 	
 	
