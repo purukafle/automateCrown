@@ -5,17 +5,17 @@ import org.openqa.selenium.WebDriver;
 import com.libraries.Base;
 
 public class HomePage extends Base{
+	String url="https://www.crown.com/en-us.html";
 	private WebDriver driver;
-	
 	public HomePage(WebDriver _driver) {
-		driver=_driver;
-	}
-	public HomePage gotoCrownHomePage() {
-		String webUrl="https://www.crown.com/en-us.html";
-		driver.get(webUrl);
-		return this;
+		this.driver=_driver;
 		
 	}
+	public HomePage goToHomePage() {
+		driver.get(url);
+		return this;
+	}
+	
 	
 	
 

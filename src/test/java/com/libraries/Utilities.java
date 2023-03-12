@@ -20,6 +20,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class Utilities {
 	private static int waitTimesec=30;
 	private WebDriver driver;
+	
 	public WebDriver getDriver() {
 		return driver;
 	}
@@ -31,27 +32,29 @@ public class Utilities {
 		CHROME, FIREFOX, SAFARI, EDGE_CHROMIUM
 		
 	}
-	public WebDriver startDriver(Browser browser) {
+	public WebDriver startABrowser(Browser browser) {
 		try {
 			switch (browser) {
 			case CHROME:
-				driver=startChromeDriver();
+				driver=startChromeBrowser();
 				break;
 			case FIREFOX:
-				driver=startFirefoxDriver();
+				driver=startFirefoxBrowser();
 				break;
 			case SAFARI:
-				driver=startSafariDriver();
+				driver=startSafariBrowser();
 				break;
 			case EDGE_CHROMIUM:
-				driver=startEdge_ChromiumDriver();
+				driver=startEdge_ChromiumBrowser();
 				break;
 			default: 
 				System.out.println("Does not supports the browser....");
 				System.out.println("by default chrome will be open");
-				driver=startChromeDriver();
+				driver=startChromeBrowser();
+				break;
 			
 			}
+			driver.manage().deleteAllCookies();
 			
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -63,20 +66,22 @@ public class Utilities {
 	}
 	
 	
-	private WebDriver startChromeDriver() {
+	private WebDriver startChromeBrowser() {
 		try {
 			WebDriverManager.chromedriver().setup();
 			driver=new ChromeDriver();
+			pageSync();
 		} catch (Exception e) {
 			e.printStackTrace();
 			assertEquals(true,false);
 		}
 		return driver;
 	}
-	private WebDriver startFirefoxDriver() {
+	private WebDriver startFirefoxBrowser() {
 		try {
 			WebDriverManager.firefoxdriver().setup();
 			driver=new FirefoxDriver();
+			pageSync();
 			
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -85,11 +90,11 @@ public class Utilities {
 		
 		return driver;
 	}
-	private WebDriver startEdge_ChromiumDriver() {
+	private WebDriver startEdge_ChromiumBrowser() {
 		// TODO Auto-generated method stub
 		return null;
 	}
-	private WebDriver startSafariDriver() {
+	private WebDriver startSafariBrowser() {
 		// TODO Auto-generated method stub
 		return null;
 	}

@@ -9,7 +9,7 @@ import com.libraries.Utilities.Browser;
 
 public class Base {
 	public WebDriver driver;
-	Utilities myUtils=new Utilities();
+	public Utilities myUtils=new Utilities();
 	
 	@BeforeClass
 	public void beforeAllTest() {
@@ -20,7 +20,7 @@ public class Base {
 		System.out.println("Running after all the tests........");
 	}
 	public void setUp() {
-		driver=myUtils.startDriver(Browser.CHROME);
+		driver=myUtils.startABrowser(Browser.CHROME);
 	}
 	public void tearDown(ITestResult result) {
 		if(ITestResult.FAILURE==result.getStatus()) {

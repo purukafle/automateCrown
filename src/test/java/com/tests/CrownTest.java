@@ -9,7 +9,8 @@ public class CrownTest extends Base {
 	@Test
 	public void homePageTest() {
 		HomePage page=new HomePage(driver);
-		page.gotoCrownHomePage();
+		page.goToHomePage();
+	
 		
 		
 	}
