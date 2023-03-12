@@ -18,16 +18,15 @@ import com.google.common.io.Files;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Utilities {
-	private WebDriver driver;
 	private static int waitTimesec=30;
-	
+	private WebDriver driver;
 	public WebDriver getDriver() {
 		return driver;
-		
 	}
-	public void setDriver(WebDriver _driver) {
-		this.driver=_driver;
-	}
+	public void setDriver(WebDriver driver) {
+		this.driver = driver;
+	}	
+	
 	public enum Browser{
 		CHROME, FIREFOX, SAFARI, EDGE_CHROMIUM
 		
