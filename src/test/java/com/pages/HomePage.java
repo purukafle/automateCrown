@@ -5,10 +5,12 @@ import org.openqa.selenium.WebDriver;
 import com.libraries.Base;
 
 public class HomePage extends Base{
+	
 	String url="https://www.crown.com/en-us.html";
-	private WebDriver driver;
+	public WebDriver driver;
 	public HomePage(WebDriver _driver) {
 		this.driver=_driver;
+		
 		
 	}
 	public HomePage goToHomePage() {
