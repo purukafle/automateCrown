@@ -1,5 +1,7 @@
 package com.tests;
 
+import static org.testng.Assert.assertEquals;
+
 import org.testng.annotations.Test;
 
 import com.libraries.Base;
@@ -10,10 +12,11 @@ public class CrownTest extends Base {
 	public void homePageTest() {
 		HomePage page=new HomePage(driver);
 		page.goToHomePage();
-		
-	
-		
-		
+		String title=driver.getTitle();	
+		System.out.println(title);
+		String expected="Crown Equipment Corporation | USA | Material Handling";
+		assertEquals(title, expected);		
 	}
+	
 
 }

@@ -2,35 +2,35 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-12T20:03:11 EDT" name="Default suite" finished-at="2023-03-12T20:03:29 EDT" duration-ms="18656">
+  <suite started-at="2023-03-12T20:30:29 EDT" name="Default suite" finished-at="2023-03-12T20:30:46 EDT" duration-ms="17195">
     <groups>
     </groups>
-    <test started-at="2023-03-12T20:03:11 EDT" name="Default test" finished-at="2023-03-12T20:03:29 EDT" duration-ms="18656">
+    <test started-at="2023-03-12T20:30:29 EDT" name="Default test" finished-at="2023-03-12T20:30:46 EDT" duration-ms="17195">
       <class name="com.tests.CrownTest">
-        <test-method is-config="true" signature="beforeAllTest()[pri:0, instance:com.tests.CrownTest@a1153bc]" started-at="2023-03-12T20:03:11 EDT" name="beforeAllTest" finished-at="2023-03-12T20:03:11 EDT" duration-ms="25" status="PASS">
+        <test-method is-config="true" signature="beforeAllTest()[pri:0, instance:com.tests.CrownTest@7c7b252e]" started-at="2023-03-12T20:30:29 EDT" name="beforeAllTest" finished-at="2023-03-12T20:30:29 EDT" duration-ms="18" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeAllTest -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.tests.CrownTest@a1153bc]" started-at="2023-03-12T20:03:11 EDT" name="setUp" finished-at="2023-03-12T20:03:20 EDT" duration-ms="8950" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.tests.CrownTest@7c7b252e]" started-at="2023-03-12T20:30:29 EDT" name="setUp" finished-at="2023-03-12T20:30:38 EDT" duration-ms="8999" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="homePageTest()[pri:0, instance:com.tests.CrownTest@a1153bc]" started-at="2023-03-12T20:03:20 EDT" name="homePageTest" finished-at="2023-03-12T20:03:24 EDT" duration-ms="3930" status="PASS">
+        <test-method signature="homePageTest()[pri:0, instance:com.tests.CrownTest@7c7b252e]" started-at="2023-03-12T20:30:38 EDT" name="homePageTest" finished-at="2023-03-12T20:30:41 EDT" duration-ms="2670" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- homePageTest -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.tests.CrownTest@a1153bc]" started-at="2023-03-12T20:03:24 EDT" name="tearDown" finished-at="2023-03-12T20:03:29 EDT" duration-ms="5656" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.tests.CrownTest@7c7b252e]" started-at="2023-03-12T20:30:41 EDT" name="tearDown" finished-at="2023-03-12T20:30:46 EDT" duration-ms="5429" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=homePageTest status=SUCCESS method=CrownTest.homePageTest()[pri:0, instance:com.tests.CrownTest@a1153bc] output={null}]]]>
+                <![CDATA[[TestResult name=homePageTest status=SUCCESS method=CrownTest.homePageTest()[pri:0, instance:com.tests.CrownTest@7c7b252e] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="afterAllTest()[pri:0, instance:com.tests.CrownTest@a1153bc]" started-at="2023-03-12T20:03:29 EDT" name="afterAllTest" finished-at="2023-03-12T20:03:29 EDT" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="afterAllTest()[pri:0, instance:com.tests.CrownTest@7c7b252e]" started-at="2023-03-12T20:30:46 EDT" name="afterAllTest" finished-at="2023-03-12T20:30:46 EDT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterAllTest -->

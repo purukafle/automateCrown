@@ -5,9 +5,11 @@
     <classes>
       <class name="com.tests.CrownTest">
         <methods>
-          <include name="afterAllTest"/>
           <include name="beforeAllTest"/>
+          <include name="afterAllTest"/>
+          <include name="tearDown"/>
           <include name="homePageTest"/>
+          <include name="setUp"/>
         </methods>
       </class> <!-- com.tests.CrownTest -->
     </classes>
