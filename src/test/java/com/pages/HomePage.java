@@ -6,7 +6,8 @@ import com.libraries.Base;
 
 public class HomePage extends Base{
 	
-	String url="https://www.crown.com/en-us.html";
+	String url="https://www.kayak.com/";
+	
 	public WebDriver driver;
 	public HomePage(WebDriver _driver) {
 		this.driver=_driver;
